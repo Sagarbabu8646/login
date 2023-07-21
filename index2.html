@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+  
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        header{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(75deg,rgb(109, 106, 106),rgb(95, 95, 106),rgb(112, 140, 112),rgb(135, 110, 110),rgb(112, 140, 112),rgb(95, 95, 106),rgb(109, 106, 106));
+            background-size: 400vw;
+            background-position: 400vw;
+            animation: headerBGCol 15s infinite linear;
+            overflow: hidden;
+            position: relative;
+            /* z-index: -1; */
+        }
+        @keyframes headerBGCol {
+            from{
+                background-position: 400vw;
+
+
+            }
+            to{
+                background-position: 0vw;
+
+            }
+            
+        }
+        body{
+            width: 100%;
+            height: 500vh;
+            background-repeat: no-repeat;
+            background-size: 100% 500vh;
+            background-image: linear-gradient(75deg,rgb(109, 106, 106),rgb(95, 95, 106),rgb(112, 140, 112),rgb(135, 110, 110),rgb(112, 140, 112),rgb(95, 95, 106),rgb(109, 106, 106));
+       }
+        #logo{
+            width: 50px;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            text-shadow: 2px 2px 5px white;
+        }
+        #hero{
+            width: 300px;
+            position: absolute;
+            top: 1px;
+            left: 50px;
+            filter: drop-shadow(5px 5px 5px black);
+            /* text-shadow: 2px 2px 5px white; */
+        }
+        #message,#message2{
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            left: 20%;
+            top: 5px;
+            align-items: center;
+            display: flex;
+            z-index: 2;
+            justify-content: center;
+            clip-path: polygon(86% 46%, 100% 75%, 60% 67%, 22% 59%, 0 83%, 17% 54%, 7% 17%);
+            background-color: beige;
+        }
+        #message2{
+            width: 180px;
+            height: 80px;
+            background-color: black;
+            filter: blur(100px);
+            z-index: 1;
+        }
+        #textMessage{
+            position: relative;
+            right: 20px;
+            bottom: 4px;
+        }
+        #headingstart,#headingMiddle{
+            font-size: 120px;
+            color: white;
+            position: absolute;
+            top: 16%;
+            left: 30%;
+            text-shadow: 2px 2px 5px black;
+            letter-spacing: 5px;
+        }
+        #headingMiddle{
+            top: 30%;
+        }
+        #headingend{
+            color: orange;
+            text-shadow: 2px 2px 5px black;
+            position: absolute;
+            font-size: 130px;
+            top: 20%;
+            left: 51%;
+            font-family: 'Dosis',sans-serif;
+            transform: scale(2) scaleY(1.2);
+        }
+        #z{
+            height: 3.3vh;
+            width: 350px;
+            border-radius: 20px;
+            position: absolute;
+            background-color: orange;
+            top: 51.3%;
+            right: 17%;
+            box-shadow:5px 5px 5px black ;
+        }
+        #navbar{
+            width: 250px;
+            height: 200px;
+            position: absolute;
+            right: 22%;
+            top: 17%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            z-index: 10;
+        }
+        .navopt{
+            width: 80px;
+            height: 80px;
+            background-color: rgba(128, 161, 161, 0.585);
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            font-size: 10px;
+            letter-spacing: 5px;
+            transition: all 0.5s;
+            position: relative;
+            z-index: 1000;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px black;
+            background-size: 100% 100%;
+            font-weight: bold;
+            text-shadow: 5px 5px 5px black;
+        }
+        .navopt:hover{
+            transform: scale(1.2);
+            color: orange;
+        }
+        #home{
+            background-image: url("./645.png");
+        }
+        #info{
+            background-image: url("./679.png");
+        }
+        #feedback{
+            background-image: url("./687.png");
+        }
+        #signout{
+            background-image: url("./758.png");
+        }
+       #Arrow{
+        color: aliceblue;
+        position: absolute;
+        bottom: 10px;
+        left: 48%;
+        font-size: 30px;
+        cursor: pointer;
+        font-family: 'Foldit', cursive;
+        text-shadow: 0px 0px 5px black;
+       }
+       #Arrow:hover{
+        animation: wiggle 0.5s infinite linear;
+       }
+       @keyframes wiggle {
+        0%,7%{
+            transform: rotateZ(0);
+            text-shadow: 0px 0px 10px red;
+        }
+        15%{
+            transform: rotateZ(-15deg);
+            text-shadow: 0px 0px 10px lawngreen;
+        }
+        20%{
+            transform: rotateZ(10deg) skewY(0deg) skewX(-10deg);
+            text-shadow: 0px 0px 10px red;
+        }
+        25%{
+            transform: rotateZ(-10deg) skewY(-20deg)  skewX(0deg);
+            text-shadow: 0px 0px 10px lawngreen;
+        }
+        30%{
+            transform: rotateZ(6deg) skewY(10deg) skewX(0deg);
+            text-shadow: 0px 0px 10px red;
+        }
+        35%{
+            transform: rotateZ(-4deg) skewY(0deg) skewX(20deg);
+            text-shadow: 0px 0px 10px lawngreen;
+        }
+        40%,100%{
+            transform: rotateZ(0deg);
+            border: none;
+        }        
+       }
+       #sec1,#sec2{
+        background-color: aliceblue;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+       }
+       #sec2{
+        background-color: black;
+       }
+       .right{
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0% 100%);
+        left: 60%;
+       }
+       .rightImg{
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        left: 20%;
+        z-index: 3;
+       }
+       .rightVid{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        top: 100px;
+       }
+       .moviename{
+        font-size: 40px;
+        position: absolute;
+        top: 1%;
+        left: 2%;
+        text-shadow: 2px 2px 5px  black;
+        background-image: linear-gradient(75deg,yellow,orange,orangered,red,orangered,orange,yellow);
+        background-size: 400%;
+        animation: textAnime 15s infinite linear;
+        background-position: 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+       @keyframes textAnime {
+        from{
+            background-position: 400%;
+        }
+        to{
+            background-position: 0%;
+        }        
+       }
+       .RD{
+        position: absolute;
+        top: 15%;
+        left: 2px;
+        font-size: 13px;
+       }
+       .date{
+        color: blue;
+        font-family: 'Orbitron',sans-serif;
+       }
+       .rating{
+        font-size: 17px;
+        position: absolute;
+        top: 10%;
+        left: 3px;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 5px black;
+       }
+       .ratingButton{
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        background-image: linear-gradient(75deg,purple,red);
+        border: none;
+        color: aliceblue;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 5px black;
+        border-radius: 5px;
+        position: absolute;
+        top: 20%;
+        box-shadow: 5px 5px 5px black;
+        left: 3%;
+       }
+       .ratingButton:hover{
+        animation: wiggleButton 2s ease-in-out 0.5s infinite;
+       }
+       @keyframes wiggleButton {
+        0%,7%{
+            transform: rotateZ(0deg);
+            border: 2px solid red;
+            box-shadow:0px 0px 10px red;
+        }
+        15%{
+            transform: rotateZ(-15deg);
+            border: 2px solid lawngreen;
+            box-shadow:0px 0px 10px lawngreen;
+        }
+        20%{
+            transform: rotateZ(10deg) skewY(0deg) skewX(-10deg);
+            border: 2px solid red;
+            box-shadow:0px 0px 10px red;
+        }
+        25%{
+            transform: rotateZ(-10deg) skewY(-20deg) skewX(0deg);
+            border: 2px solid lawngreen;
+            box-shadow:0px 0px 10px lawngreen;
+        }
+        30%{
+            transform: rotateZ(6deg) skewY(10deg) skewX(0deg);
+            border: 2px solid red;
+            box-shadow:0px 0px 10px red;
+        }
+        35%{
+            transform: rotateZ(-4deg) skewY(0deg) skewX(20deg);
+            border: 2px solid lawngreen;
+            box-shadow:0px 0px 10px lawngreen;
+        }
+        40%,100%{
+            transform: rotateZ(0);
+            border: none;
+        }
+        
+       }
+
+    </style>
+</head>
+<body>
+    <header id="head">
+        <img id="logo" src="./Logo.png" alt="">
+        <img id="hero" src="./Sasuke.png" alt="">
+        <div id="message">
+            <h1 id="textMessage">Hello!!</h1>
+        </div>
+        <div id="message2"></div>
+        <h1 id="headingstart">Mov</h1>
+        <h1 id="headingMiddle">Beat</h1>
+        <h1 id="headingend">Z</h1>
+        <div id="z"></div>
+        <div id="navbar">
+            <a href="#"><div class="navopt" id="home">Home</div></a>
+            <a href="#"><div class="navopt" id="info">Info</div></a>
+            <a href="#"><div class="navopt" id="feedback">Feedback</div></a>
+            <a href="#"><div class="navopt" id="signout">Signout</div></a>
+        </div>
+        <a href="#sec1"><h1 id="Arrow">V</h1></a>
+    </header>
+    <section id="sec1">
+        <div class="right">
+            <img class="rightImg" src="./RRR.webp" alt="">
+            <video class="rightVid" src="./RRR.mp4" autoplay muted loop></video>
+        </div>
+        <h1 class="moviename">RRR</h1>
+        <h1 class="RD">Release Date: <span class="date">24 March 2022</span></h1>
+        <h1 class="rating">Rating: <span > 7.8/10 IMDB</span></h1>
+        <button class="ratingButton">Rating</button>
+        <a href="#sec2"><h1 id="Arrow">V</h1></a>
+    </section>
+    <footer>
+        <section id="sec2">
+            <div class="right">
+                <img class="rightImg" src="./RRR.webp" alt="">
+                <video class="rightVid" src="./RRR.mp4" autoplay muted loop></video>
+            </div>
+            <h1 class="moviename">RRR</h1>
+            <h1 class="RD">Release Date: <span class="date">24 March 2022</span></h1>
+            <h1 class="rating">Rating: <span > 7.8/10 IMDB</span></h1>
+            <button class="ratingButton">Rating</button>
+            <a href="#head"><h1 id="Arrow">V</h1></a>
+        </section>
+    </footer>
+</body>
+</html>
